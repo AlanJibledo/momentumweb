@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Momentum Ciénega | Impulsa tu Crecimiento</title>
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500&display=swap" rel="stylesheet" />
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <!-- Custom Config -->
+    <script src="js/script.js"></script>
+    <!-- Custom Styles -->
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-sans transition-colors duration-300">
+
+    <!-- Loading Screen -->
+    <div id="loading-screen"
+        class="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#000000] dark:bg-background-dark overflow-hidden">
+        <!-- Logo Section -->
+        <div class="flex flex-col items-center justify-center mb-16">
+            <div class="relative flex items-start gap-1 h-32">
+                <!-- Outer Left Pillar (Swinging) -->
+                <div class="flex flex-col items-center animate-swing-left-loader">
+                    <div class="w-[2px] h-20 bg-gradient-to-b from-loader-primary/20 to-loader-primary/80"></div>
+                    <div class="w-8 h-8 rounded-full bg-loader-primary glow-effect"></div>
+                </div>
+                <!-- Static Center Pillars -->
+                <div class="flex flex-col items-center">
+                    <div class="w-[2px] h-20 bg-white/10"></div>
+                    <div class="w-8 h-8 rounded-full bg-white/20 border border-white/10"></div>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-[2px] h-20 bg-white/10"></div>
+                    <div class="w-8 h-8 rounded-full bg-white/20 border border-white/10"></div>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-[2px] h-20 bg-white/10"></div>
+                    <div class="w-8 h-8 rounded-full bg-white/20 border border-white/10"></div>
+                </div>
+                <!-- Outer Right Pillar (Swinging) -->
+                <div class="flex flex-col items-center animate-swing-right-loader">
+                    <div class="w-[2px] h-20 bg-gradient-to-b from-loader-primary/20 to-loader-primary/80"></div>
+                    <div class="w-8 h-8 rounded-full bg-loader-primary glow-effect"></div>
+                </div>
+            </div>
+            <!-- Brand Name -->
+            <h1 class="mt-8 text-white text-3xl font-light tracking-widest-extra uppercase font-[Epilogue]">
+                Momentum
+            </h1>
+        </div>
+        <!-- Progress Container -->
+        <div class="flex flex-col w-full max-w-[400px] px-6">
+            <div class="flex flex-col gap-4">
+                <div class="w-full h-[1px] bg-white/10 rounded-full overflow-hidden">
+                    <div class="h-full bg-gradient-to-r from-transparent via-loader-primary to-white"
+                        style="width: 65%;"></div>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <p class="text-white/60 text-[10px] font-medium uppercase tracking-[0.3em] pl-[0.3em]">
+                        Cargando Momentum...
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Meta Info -->
+        <div class="absolute bottom-12 w-full flex flex-col items-center opacity-40">
+            <p class="text-white text-[9px] font-normal leading-normal tracking-widest uppercase mb-1">
+                Membership Excellence
+            </p>
+            <div class="flex items-center gap-2">
+                <span class="w-8 h-[1px] bg-loader-primary/40"></span>
+                <span class="material-symbols-outlined text-[12px] text-loader-primary">blur_on</span>
+                <span class="w-8 h-[1px] bg-loader-primary/40"></span>
+            </div>
+        </div>
+        <!-- Background Ambient Glow -->
+        <div class="absolute inset-0 pointer-events-none overflow-hidden">
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-loader-primary/5 rounded-full blur-[120px]">
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation (Refined by User) -->
+    <nav
+        class="fixed top-0 w-full z-50 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-slate-200 dark:border-white/10">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-10">
+                <div class="flex items-center gap-2 shrink-0">
+                    <span class="font-display italic text-2xl tracking-tight">Momentum</span>
+                    <span
+                        class="text-[10px] tracking-[0.3em] font-bold border border-current px-2 py-0.5 ml-2">CIÉNEGA</span>
+                </div>
+                <div
+                    class="hidden lg:flex items-center gap-6 text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400">
+                    <a class="hover:text-primary transition-colors" href="#que-es">Qué es</a>
+                    <a class="hover:text-primary transition-colors" href="#para-quien">Para quién</a>
+                    <a class="hover:text-primary transition-colors" href="#principios">Principios</a>
+                    <a class="hover:text-primary transition-colors" href="#beneficios">Beneficios</a>
+                    <a class="hover:text-primary transition-colors" href="#actividades">Actividades</a>
+                    <a class="hover:text-primary transition-colors" href="#membresias">Membresías</a>
+                </div>
+            </div>
+            <div class="flex items-center">
+                <a class="bg-primary text-background-dark px-6 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-zinc-200 transition-colors"
+                    href="#membresias">
+                    Únete
+                </a>
+                <button class="lg:hidden ml-4 text-primary">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section (Refined by User) -->
+    <section class="relative min-h-screen flex flex-col items-center justify-center pt-32 pb-20 px-6 overflow-hidden">
+        <div class="absolute top-40 left-0 w-1/4 h-px bg-white/20 hidden lg:block"></div>
+        <div class="absolute bottom-40 right-0 w-1/4 h-px bg-white/20 hidden lg:block"></div>
+        <div class="max-w-4xl w-full text-center">
+            <div class="newtons-cradle mb-12">
+                <div class="pendulum swing-left">
+                    <div class="string"></div>
+                    <div class="ball"></div>
+                    <div class="label-v">COLABORA</div>
+                </div>
+                <div class="pendulum">
+                    <div class="string"></div>
+                    <div class="ball"></div>
+                    <div class="label-v">APRENDE</div>
+                </div>
+                <div class="pendulum">
+                    <div class="string"></div>
+                    <div class="ball"></div>
+                    <div class="label-v">CONECTA</div>
+                </div>
+                <div class="pendulum">
+                    <div class="string"></div>
+                    <div class="ball"></div>
+                    <div class="label-v">INSPIRA</div>
+                </div>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-display italic mb-6 leading-tight">
+                Momentum Ciénega: Una comunidad que impulsa empresarios y emprendedores a crecer con intención.
+            </h1>
+            <p
+                class="text-lg md:text-xl text-slate-600 dark:text-zinc-400 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+                Conecta con personas que actúan con decisión, energía y ambición. Un espacio diseñado para elevar tu
+                estándar personal y profesional.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a class="w-full sm:w-auto px-10 py-4 bg-primary text-background-dark font-bold rounded-full text-sm uppercase tracking-widest hover:scale-105 transition-transform"
+                    href="#membresias">
+                    Únete a Momentum
+                </a>
+                <a class="w-full sm:w-auto px-10 py-4 border border-zinc-700 dark:border-white/20 font-bold rounded-full text-sm uppercase tracking-widest hover:bg-white/5 transition-colors"
+                    href="#que-es">
+                    Conoce cómo funciona
+                </a>
+            </div>
+        </div>
+        <div
+            class="mt-20 flex flex-wrap justify-center gap-x-8 gap-y-4 text-xs uppercase tracking-[0.3em] font-medium text-zinc-500">
+            <span>Networking</span>
+            <span>Eventos</span>
+            <span>Proyectos</span>
+            <span>Retos</span>
+            <span>Coaching</span>
+            <span>Debates</span>
+        </div>
+    </section>
+
+    <!-- What is Momentum (Refined by User) -->
+    <section class="py-24 px-6 border-y border-white/5 bg-zinc-50 dark:bg-zinc-900/20" id="que-es">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-6">
+                    <span class="text-xs font-bold uppercase tracking-[0.4em] text-zinc-500">El Concepto</span>
+                    <h2 class="text-4xl md:text-5xl font-display italic leading-tight">¿Qué es Momentum?</h2>
+                    <div class="w-20 h-1 bg-primary"></div>
+                </div>
+                <div class="text-lg text-slate-600 dark:text-zinc-300 leading-relaxed space-y-6">
+                    <p>
+                        Momentum no es solo un grupo de networking; es un catalizador de transformación. Hemos creado un
+                        entorno de alto rendimiento donde la colaboración y el intercambio de experiencias son el motor
+                        del éxito.
+                    </p>
+                    <p>
+                        Aquí, la "intención" lo es todo. Cada reunión, charla y proyecto está diseñado para sacarte de
+                        tu zona de confort y proporcionarte las herramientas necesarias para escalar tus ideas.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who is it for (Refined by User) -->
+    <section class="py-24 px-6" id="para-quien">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-5xl font-display italic mb-4">¿Para quién es Momentum?</h2>
+                <p class="text-zinc-500 uppercase tracking-widest text-sm">Buscamos perfiles con hambre de trascender
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div
+                    class="p-10 border border-slate-200 dark:border-white/10 rounded-2xl bg-white dark:bg-white/5 hover:border-primary/50 transition-colors group">
+                    <div
+                        class="w-12 h-12 bg-zinc-100 dark:bg-white/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-black transition-colors">
+                        <span class="material-symbols-outlined">rocket_launch</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 uppercase tracking-wider text-black dark:text-white">Emprendedores
+                    </h3>
+                    <p class="text-zinc-500 dark:text-zinc-400 leading-relaxed">
+                        Líderes que están en la fase de construcción y necesitan un ecosistema que soporte su visión y
+                        acelere sus resultados.
+                    </p>
+                </div>
+                <div
+                    class="p-10 border border-slate-200 dark:border-white/10 rounded-2xl bg-white dark:bg-white/5 hover:border-primary/50 transition-colors group">
+                    <div
+                        class="w-12 h-12 bg-zinc-100 dark:bg-white/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-black transition-colors">
+                        <span class="material-symbols-outlined">business_center</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 uppercase tracking-wider text-black dark:text-white">Empresarios
+                    </h3>
+                    <p class="text-zinc-500 dark:text-zinc-400 leading-relaxed">
+                        Dueños de negocios consolidados que buscan nuevas perspectivas, alianzas estratégicas y
+                        mantenerse a la vanguardia.
+                    </p>
+                </div>
+                <div
+                    class="p-10 border border-slate-200 dark:border-white/10 rounded-2xl bg-white dark:bg-white/5 hover:border-primary/50 transition-colors group">
+                    <div
+                        class="w-12 h-12 bg-zinc-100 dark:bg-white/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-black transition-colors">
+                        <span class="material-symbols-outlined">psychology</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 uppercase tracking-wider text-black dark:text-white">Profesionales
+                    </h3>
+                    <p class="text-zinc-500 dark:text-zinc-400 leading-relaxed">
+                        Expertos y tomadores de decisiones que desean expandir su influencia y colaborar en proyectos de
+                        alto impacto.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Principles (Refined by User) -->
+    <section class="py-24 px-6 bg-zinc-100 dark:bg-zinc-950" id="principios">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-20">
+                <h2 class="text-4xl md:text-5xl font-display italic mb-4">Nuestros Principios</h2>
+                <div class="w-24 h-px bg-slate-400 dark:bg-white/30 mt-8"></div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-16">
+                <div class="relative pt-8">
+                    <span class="absolute top-0 left-0 text-6xl font-display opacity-10 italic">01</span>
+                    <h4 class="text-2xl font-bold mb-4 uppercase tracking-tighter">Aprende</h4>
+                    <p class="text-zinc-500 dark:text-zinc-400 text-sm leading-relaxed">
+                        Formación continua a través de masterclasses y mentorías con los mejores referentes del sector.
+                    </p>
+                </div>
+                <div class="relative pt-8">
+                    <span class="absolute top-0 left-0 text-6xl font-display opacity-10 italic">02</span>
+                    <h4 class="text-2xl font-bold mb-4 uppercase tracking-tighter">Conecta</h4>
+                    <p class="text-zinc-500 dark:text-zinc-400 text-sm leading-relaxed">
+                        Relaciones genuinas basadas en la confianza y el valor mutuo. No es lo que sabes, es a quién
+                        conoces.
+                    </p>
+                </div>
+                <div class="relative pt-8">
+                    <span class="absolute top-0 left-0 text-6xl font-display opacity-10 italic">03</span>
+                    <h4 class="text-2xl font-bold mb-4 uppercase tracking-tighter">Inspira</h4>
+                    <p class="text-zinc-500 dark:text-zinc-400 text-sm leading-relaxed">
+                        Comparte tu historia y deja que el éxito de otros sea el combustible para tus propios objetivos.
+                    </p>
+                </div>
+                <div class="relative pt-8">
+                    <span class="absolute top-0 left-0 text-6xl font-display opacity-10 italic">04</span>
+                    <h4 class="text-2xl font-bold mb-4 uppercase tracking-tighter">Colabora</h4>
+                    <p class="text-zinc-500 dark:text-zinc-400 text-sm leading-relaxed">
+                        El crecimiento es exponencial cuando sumamos talentos. Creamos puentes para proyectos conjuntos.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits (Merged Content) -->
+    <section class="py-24 px-6 max-w-7xl mx-auto border-t border-white/5 bg-background-dark/50" id="beneficios">
+        <div class="text-center mb-16">
+            <h2 class="font-display text-4xl md:text-5xl mb-4 italic">Beneficios</h2>
+            <div class="h-1 w-24 bg-primary mx-auto"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div
+                class="p-8 border border-slate-200 dark:border-slate-800 rounded-xl hover:border-slate-400 dark:hover:border-slate-600 transition-colors">
+                <span class="material-symbols-outlined text-4xl mb-4 text-accent-blue">groups</span>
+                <h3 class="text-xl font-bold mb-2">Comunidad</h3>
+                <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Acceso a una red exclusiva de
+                    líderes y emprendedores de la región Ciénega.</p>
+            </div>
+            <div
+                class="p-8 border border-slate-200 dark:border-slate-800 rounded-xl hover:border-slate-400 dark:hover:border-slate-600 transition-colors">
+                <span class="material-symbols-outlined text-4xl mb-4 text-accent-purple">hub</span>
+                <h3 class="text-xl font-bold mb-2">Networking</h3>
+                <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Conexiones estratégicas diseñadas
+                    para impulsar tu crecimiento profesional.</p>
+            </div>
+            <div
+                class="p-8 border border-slate-200 dark:border-slate-800 rounded-xl hover:border-slate-400 dark:hover:border-slate-600 transition-colors">
+                <span class="material-symbols-outlined text-4xl mb-4 text-accent-blue">auto_stories</span>
+                <h3 class="text-xl font-bold mb-2">Aprendizaje</h3>
+                <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Capacitación continua en temas de
+                    vanguardia empresarial y liderazgo.</p>
+            </div>
+            <div
+                class="p-8 border border-slate-200 dark:border-slate-800 rounded-xl hover:border-slate-400 dark:hover:border-slate-600 transition-colors">
+                <span class="material-symbols-outlined text-4xl mb-4 text-accent-purple">insights</span>
+                <h3 class="text-xl font-bold mb-2">Inspiración</h3>
+                <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Acceso a experiencias y casos de
+                    éxito que transformarán tu visión.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities / Inside Momentum (Merged Content) -->
+    <section class="py-24 px-6 border-t border-white/5" id="actividades">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="w-full md:w-1/2">
+                    <h2 class="font-display text-4xl mb-6 italic">¿Qué sucede dentro de Momentum?</h2>
+                    <p class="text-slate-600 dark:text-slate-400 mb-8 max-w-md">Creamos el ecosistema perfecto para que
+                        las ideas se conviertan en realidades tangibles a través de dinámicas constantes.</p>
+                    <div class="grid grid-cols-2 gap-y-8 gap-x-4">
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-accent-blue">handshake</span>
+                            <span class="font-medium">Networking</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-accent-blue">event</span>
+                            <span class="font-medium">Eventos</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-accent-blue">assignment</span>
+                            <span class="font-medium">Proyectos</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-accent-blue">military_tech</span>
+                            <span class="font-medium">Retos</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-accent-blue">psychology</span>
+                            <span class="font-medium">Coaching</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-accent-blue">forum</span>
+                            <span class="font-medium">Debates</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 relative flex justify-center">
+                    <div class="relative w-full max-w-sm aspect-square flex items-center justify-center">
+                        <div
+                            class="flex gap-4 items-end pb-12 h-64 border-t-2 border-slate-300 dark:border-slate-700 relative w-64">
+                            <div class="absolute -top-[2px] left-0 w-full h-1 bg-white/10"></div>
+                            <div class="flex-1 flex flex-col items-center">
+                                <div class="w-[2px] h-32 bg-slate-300 dark:bg-slate-700"></div>
+                                <div class="w-10 h-10 rounded-full bg-white shadow-lg -mt-1"></div>
+                                <span
+                                    class="text-[10px] mt-4 uppercase tracking-[0.2em] [writing-mode:vertical-lr] rotate-180">Colabora</span>
+                            </div>
+                            <div class="flex-1 flex flex-col items-center">
+                                <div class="w-[2px] h-32 bg-slate-300 dark:bg-slate-700"></div>
+                                <div class="w-10 h-10 rounded-full bg-white shadow-lg -mt-1"></div>
+                                <span
+                                    class="text-[10px] mt-4 uppercase tracking-[0.2em] [writing-mode:vertical-lr] rotate-180">Aprende</span>
+                            </div>
+                            <div class="flex-1 flex flex-col items-center">
+                                <div class="w-[2px] h-32 bg-slate-300 dark:bg-slate-700"></div>
+                                <div class="w-10 h-10 rounded-full bg-white shadow-lg -mt-1"></div>
+                                <span
+                                    class="text-[10px] mt-4 uppercase tracking-[0.2em] [writing-mode:vertical-lr] rotate-180">Conecta</span>
+                            </div>
+                            <div class="flex-1 flex flex-col items-center">
+                                <div class="w-[2px] h-32 bg-slate-300 dark:bg-slate-700"></div>
+                                <div class="w-10 h-10 rounded-full bg-white shadow-lg -mt-1"></div>
+                                <span
+                                    class="text-[10px] mt-4 uppercase tracking-[0.2em] [writing-mode:vertical-lr] rotate-180">Inspira</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Memberships (Merged Content) -->
+    <section class="py-24 px-6 max-w-7xl mx-auto border-t border-white/5 bg-background-dark/50" id="membresias">
+        <div class="text-center mb-16">
+            <h2 class="font-display text-4xl md:text-5xl mb-4 italic">Membresías</h2>
+            <p class="text-slate-600 dark:text-slate-400">Elige tu rol en el ecosistema de Momentum Ciénega.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div
+                class="momentum-card bg-white dark:bg-zinc-900 border-2 border-slate-200 dark:border-slate-800 p-8 rounded-2xl flex flex-col">
+                <div class="mb-8">
+                    <span
+                        class="px-4 py-1 rounded-full text-xs font-bold tracking-widest uppercase bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Rol:
+                        Explorer</span>
+                    <h3 class="text-2xl font-bold mt-4">Participante</h3>
+                    <div class="mt-4 flex items-baseline">
+                        <span class="text-4xl font-bold">$0</span>
+                    </div>
+                </div>
+                <ul class="space-y-4 mb-8 flex-grow">
+                    <li class="flex items-start gap-3 text-sm">
+                        <span class="material-symbols-outlined text-slate-400 text-sm mt-1">check_circle</span>
+                        <span>Acceso a newsletter mensual</span>
+                    </li>
+                    <li class="flex items-start gap-3 text-sm">
+                        <span class="material-symbols-outlined text-slate-400 text-sm mt-1">check_circle</span>
+                        <span>Invitaciones a eventos públicos</span>
+                    </li>
+                    <li class="flex items-start gap-3 text-sm">
+                        <span class="material-symbols-outlined text-slate-400 text-sm mt-1">check_circle</span>
+                        <span>Acceso a blog de la comunidad</span>
+                    </li>
+                </ul>
+                <button onclick="openModal('modal-explorer')"
+                    class="w-full py-4 rounded-xl border-2 border-slate-200 dark:border-slate-700 font-bold hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Unirse
+                    Ahora</button>
+            </div>
+            <div
+                class="momentum-card bg-white dark:bg-zinc-900 border-2 border-accent-blue p-8 rounded-2xl flex flex-col relative scale-105 z-10 shadow-2xl shadow-accent-blue/10">
+                <div
+                    class="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent-blue text-white px-6 py-1 rounded-full text-xs font-bold uppercase tracking-widest">
+                    Recomendado</div>
+                <div class="mb-8">
+                    <span
+                        class="px-4 py-1 rounded-full text-xs font-bold tracking-widest uppercase bg-accent-blue/10 text-accent-blue">Rol:
+                        Participante</span>
+                    <h3 class="text-2xl font-bold mt-4">Miembro Activo</h3>
+                    <div class="mt-4 flex items-baseline">
+                        <span class="text-4xl font-bold">$450</span>
+                        <span class="text-slate-500 text-sm ml-2">/mes</span>
+                    </div>
+                </div>
+                <ul class="space-y-4 mb-8 flex-grow">
+                    <li class="flex items-start gap-3 text-sm">
+                        <span class="material-symbols-outlined text-accent-blue text-sm mt-1">check_circle</span>
+                        <span>Directorio empresarial Momentum</span>
+                    </li>
+                    <li class="flex items-start gap-3 text-sm">
+                        <span class="material-symbols-outlined text-accent-blue text-sm mt-1">check_circle</span>
+                        <span>Acceso a grupos de WhatsApp exclusivos</span>
+                    </li>
+                    <li class="flex items-start gap-3 text-sm">
+                        <span class="material-symbols-outlined text-accent-blue text-sm mt-1">check_circle</span>
+                        <span>Descuentos en talleres y seminarios</span>
+                    </li>
+                    <li class="flex items-start gap-3 text-sm">
+                        <span class="material-symbols-outlined text-accent-blue text-sm mt-1">check_circle</span>
+                        <span>Participación en sesiones de Networking</span>
+                    </li>
+                </ul>
+                <button onclick="openModal('modal-active')"
+                    class="w-full py-4 rounded-xl bg-accent-blue text-white font-bold hover:bg-blue-600 transition-colors shadow-lg shadow-accent-blue/20">Comenzar</button>
+            </div>
+            <div
+                class="momentum-card bg-white dark:bg-zinc-900 border-2 border-slate-200 dark:border-slate-800 p-8 rounded-2xl flex flex-col">
+                <div class="mb-8">
+                    <span
+                        class="px-4 py-1 rounded-full text-xs font-bold tracking-widest uppercase bg-accent-purple/10 text-accent-purple">Rol:
+                        Leader</span>
+                    <h3 class="text-2xl font-bold mt-4">Titular Momentum</h3>
+                    <div class="mt-4 flex items-baseline">
+                        <span class="text-4xl font-bold">$4,500</span>
+                        <span class="text-slate-500 text-sm ml-2">/año</span>
+                    </div>
+                </div>
+                <ul class="space-y-4 mb-8 flex-grow">
+                    <li class="flex items-start gap-3 text-sm">
+                        <span class="material-symbols-outlined text-accent-purple text-sm mt-1">stars</span>
+                        <span>Todo lo anterior + Beneficios VIP</span>
+                    </li>
+                    <li class="flex items-start gap-3 text-sm">
+                        <span class="material-symbols-outlined text-accent-purple text-sm mt-1">check_circle</span>
+                        <span>Coaching empresarial 1-a-1</span>
+                    </li>
+                    <li class="flex items-start gap-3 text-sm">
+                        <span class="material-symbols-outlined text-accent-purple text-sm mt-1">check_circle</span>
+                        <span>Derecho a liderar un Proyecto</span>
+                    </li>
+                    <li class="flex items-start gap-3 text-sm">
+                        <span class="material-symbols-outlined text-accent-purple text-sm mt-1">check_circle</span>
+                        <span>Mención destacada como Partner</span>
+                    </li>
+                </ul>
+                <button onclick="openModal('modal-leader')"
+                    class="w-full py-4 rounded-xl border-2 border-accent-purple text-accent-purple font-bold hover:bg-accent-purple hover:text-white transition-all">Elegir
+                    Plan Anual</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Refined by User) -->
+    <footer class="py-20 px-6 border-t border-white/10" id="unete">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
+            <div>
+                <div class="flex items-center gap-2 mb-4">
+                    <span class="font-display italic text-3xl tracking-tight">Momentum</span>
+                    <span
+                        class="text-[10px] tracking-[0.3em] font-bold border border-current px-2 py-0.5 ml-2">CIÉNEGA</span>
+                </div>
+                <p class="text-zinc-500 text-sm">© 2024 Momentum Ciénega. Todos los derechos reservados.</p>
+            </div>
+            <div class="flex gap-8 text-xs uppercase tracking-widest font-bold">
+                <a class="hover:text-zinc-400 transition-colors" href="#">Instagram</a>
+                <a class="hover:text-zinc-400 transition-colors" href="#">LinkedIn</a>
+                <a class="hover:text-zinc-400 transition-colors" href="#">Contacto</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+
+    <!-- Explorer Modal ($0) -->
+    <div id="modal-explorer" class="fixed inset-0 z-50 flex items-center justify-center p-4 modal-overlay hidden">
+        <div
+            class="bg-zinc-950 border border-slate-800 w-full max-w-4xl rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row relative">
+            <button onclick="closeModal('modal-explorer')"
+                class="absolute top-6 right-6 text-slate-500 hover:text-white transition-colors z-10">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+            <div
+                class="w-full md:w-5/12 bg-zinc-900/50 p-8 md:p-12 border-b md:border-b-0 md:border-r border-slate-800">
+                <div class="mb-8">
+                    <span
+                        class="px-4 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase bg-slate-800 text-accent-silver border border-slate-700">
+                        Rol: Explorer
+                    </span>
+                    <h2 class="font-display text-3xl md:text-4xl mt-6 italic">Participante</h2>
+                    <div class="mt-2 flex items-baseline gap-2">
+                        <span class="text-2xl font-bold text-white">$0</span>
+                        <span class="text-slate-500 text-sm uppercase tracking-widest">MXN</span>
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Comienza tu viaje en el ecosistema Momentum. Mantente informado y conectado con la comunidad de
+                        la región.
+                    </p>
+                    <ul class="space-y-5">
+                        <li class="flex items-center gap-4 group">
+                            <div
+                                class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-accent-silver transition-colors">
+                                <span class="material-symbols-outlined text-lg">mail</span>
+                            </div>
+                            <span class="text-sm text-slate-300">Newsletter mensual</span>
+                        </li>
+                        <li class="flex items-center gap-4 group">
+                            <div
+                                class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-accent-silver transition-colors">
+                                <span class="material-symbols-outlined text-lg">celebration</span>
+                            </div>
+                            <span class="text-sm text-slate-300">Invitaciones a eventos públicos</span>
+                        </li>
+                        <li class="flex items-center gap-4 group">
+                            <div
+                                class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-accent-silver transition-colors">
+                                <span class="material-symbols-outlined text-lg">article</span>
+                            </div>
+                            <span class="text-sm text-slate-300">Acceso a blog de la comunidad</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mt-12 pt-8 border-t border-slate-800/50">
+                    <div class="flex items-center gap-2 text-xs text-slate-500 uppercase tracking-widest">
+                        <span>Aprende</span>
+                        <span class="text-slate-700">•</span>
+                        <span>Conecta</span>
+                        <span class="text-slate-700">•</span>
+                        <span>Inspira</span>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full md:w-7/12 p-8 md:p-12 flex flex-col justify-center">
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold text-white mb-2">Registro de Cuenta</h3>
+                    <p class="text-slate-400 text-sm">Completa tus datos para activar tu acceso gratuito.</p>
+                </div>
+                <form action="#" class="space-y-6">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2"
+                            for="full_name">Nombre Completo</label>
+                        <input
+                            class="w-full bg-zinc-900 border-slate-800 rounded-xl px-4 py-3 text-white focus:ring-accent-silver focus:border-accent-silver transition-all placeholder:text-slate-600"
+                            id="full_name" name="full_name" placeholder="Ej. Juan Pérez" type="text" />
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2"
+                            for="email">Correo Electrónico</label>
+                        <input
+                            class="w-full bg-zinc-900 border-slate-800 rounded-xl px-4 py-3 text-white focus:ring-accent-silver focus:border-accent-silver transition-all placeholder:text-slate-600"
+                            id="email" name="email" placeholder="tu@correo.com" type="email" />
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2"
+                            for="phone">Teléfono / WhatsApp</label>
+                        <input
+                            class="w-full bg-zinc-900 border-slate-800 rounded-xl px-4 py-3 text-white focus:ring-accent-silver focus:border-accent-silver transition-all placeholder:text-slate-600"
+                            id="phone" name="phone" placeholder="+52 (33) 0000 0000" type="tel" />
+                    </div>
+                    <div class="pt-4">
+                        <button
+                            class="w-full py-4 rounded-xl bg-white text-zinc-950 font-bold hover:bg-slate-200 transition-all shadow-lg shadow-white/5 flex items-center justify-center gap-2"
+                            type="submit">
+                            Confirmar Registro
+                            <span class="material-symbols-outlined">arrow_forward</span>
+                        </button>
+                        <p class="text-[10px] text-slate-600 text-center mt-4 uppercase tracking-tighter">
+                            Al registrarte, aceptas nuestros términos y aviso de privacidad.
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Active Member Modal ($450) -->
+    <div id="modal-active" class="fixed inset-0 z-50 flex items-center justify-center p-4 modal-overlay hidden">
+        <div
+            class="relative w-full max-w-4xl bg-zinc-900 rounded-3xl overflow-hidden shadow-2xl border border-slate-800 flex flex-col md:flex-row">
+            <div class="w-full md:w-5/12 bg-zinc-950 p-8 md:p-12 border-b md:border-b-0 md:border-r border-slate-800">
+                <div class="mb-8">
+                    <span
+                        class="px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase bg-accent-blue/10 text-accent-blue border border-accent-blue/20">
+                        Rol: Participante
+                    </span>
+                    <h2 class="font-display italic text-3xl mt-6 mb-2">Miembro Activo</h2>
+                    <div class="flex items-baseline gap-1">
+                        <span class="text-4xl font-bold text-white">$450</span>
+                        <span class="text-slate-500 text-sm">MXN / mes</span>
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <p class="text-xs uppercase tracking-[0.2em] text-slate-500 font-bold">Incluye acceso a:</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-accent-blue text-lg">groups</span>
+                            <span class="text-sm text-slate-300">Grupos de WhatsApp exclusivos</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-accent-blue text-lg">meeting_room</span>
+                            <span class="text-sm text-slate-300">Sesiones cerradas de Networking</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-accent-blue text-lg">analytics</span>
+                            <span class="text-sm text-slate-300">Análisis de casos empresariales</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-accent-blue text-lg">verified</span>
+                            <span class="text-sm text-slate-300">Directorio regional de socios</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mt-12 pt-8 border-t border-slate-800">
+                    <div class="flex items-center gap-4 opacity-50">
+                        <div class="text-2xl font-display italic">Momentum <span
+                                class="block text-[8px] uppercase tracking-[0.4em] not-italic font-sans">Ciénega</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full md:w-7/12 p-8 md:p-12 bg-zinc-900">
+                <button onclick="closeModal('modal-active')"
+                    class="absolute top-6 right-6 text-slate-500 hover:text-white transition-colors">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+                <div class="flex justify-between items-center mb-10">
+                    <h3 class="text-xl font-semibold">Detalles de Pago</h3>
+                    <div class="flex gap-2">
+                        <div class="w-8 h-5 bg-slate-800 rounded-sm opacity-50"></div>
+                        <div class="w-8 h-5 bg-slate-800 rounded-sm opacity-50"></div>
+                        <div class="w-8 h-5 bg-slate-800 rounded-sm opacity-50"></div>
+                    </div>
+                </div>
+                <form class="space-y-6">
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-widest text-slate-400 mb-2"
+                            for="card-name">Nombre del Titular</label>
+                        <input
+                            class="w-full bg-slate-800/50 border-slate-700 rounded-xl px-4 py-3 text-white placeholder:text-slate-600 focus:ring-accent-blue focus:border-accent-blue transition-all"
+                            id="card-name" placeholder="Como aparece en la tarjeta" type="text" />
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-widest text-slate-400 mb-2"
+                            for="card-number">Número de Tarjeta</label>
+                        <div class="relative">
+                            <input
+                                class="w-full bg-slate-800/50 border-slate-700 rounded-xl px-4 py-3 text-white placeholder:text-slate-600 focus:ring-accent-blue focus:border-accent-blue transition-all"
+                                id="card-number" placeholder="0000 0000 0000 0000" type="text" />
+                            <span
+                                class="absolute right-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-slate-500">credit_card</span>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-widest text-slate-400 mb-2"
+                                for="card-exp">Vencimiento</label>
+                            <input
+                                class="w-full bg-slate-800/50 border-slate-700 rounded-xl px-4 py-3 text-white placeholder:text-slate-600 focus:ring-accent-blue focus:border-accent-blue transition-all"
+                                id="card-exp" placeholder="MM / YY" type="text" />
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-widest text-slate-400 mb-2"
+                                for="card-cvv">CVV</label>
+                            <input
+                                class="w-full bg-slate-800/50 border-slate-700 rounded-xl px-4 py-3 text-white placeholder:text-slate-600 focus:ring-accent-blue focus:border-accent-blue transition-all"
+                                id="card-cvv" placeholder="123" type="text" />
+                        </div>
+                    </div>
+                    <div class="pt-6">
+                        <button
+                            class="w-full bg-accent-blue hover:bg-blue-600 text-white font-bold py-4 rounded-xl transition-all shadow-lg shadow-accent-blue/20 flex items-center justify-center gap-2"
+                            type="submit">
+                            <span class="material-symbols-outlined text-xl">lock</span>
+                            Suscribirse Ahora
+                        </button>
+                        <p class="text-center text-[10px] text-slate-500 mt-4 uppercase tracking-widest">
+                            Pago seguro encriptado SSL de 256 bits
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Leader Modal ($5000) -->
+    <div id="modal-leader" class="fixed inset-0 z-50 flex items-center justify-center p-4 modal-overlay hidden">
+        <div
+            class="max-w-6xl w-full glass-effect rounded-3xl overflow-hidden shadow-2xl shadow-accent-purple/20 relative flex flex-col md:flex-row border border-white/10">
+            <button onclick="closeModal('modal-leader')"
+                class="absolute top-6 right-6 text-slate-500 hover:text-white transition-colors z-20">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+            <div class="absolute top-0 right-0 w-96 h-96 bg-accent-purple/10 blur-[120px] rounded-full -z-10"></div>
+            <div class="absolute bottom-0 left-0 w-64 h-64 bg-royal-purple/10 blur-[100px] rounded-full -z-10"></div>
+            <div class="w-full md:w-5/12 p-8 md:p-12 bg-zinc-900/50 border-r border-white/5">
+                <div class="flex items-center gap-2 mb-8">
+                    <span
+                        class="px-3 py-1 bg-accent-purple/20 text-accent-purple rounded-full text-[10px] font-bold tracking-[0.2em] uppercase">Rol:
+                        Leader</span>
+                </div>
+                <h2 class="font-display text-4xl mb-2 italic">Titular Momentum</h2>
+                <p class="text-slate-400 text-sm mb-10">El máximo nivel de influencia y liderazgo en el ecosistema
+                    regional.</p>
+                <div class="space-y-8">
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-lg bg-accent-purple/10 flex items-center justify-center shrink-0">
+                            <span class="material-symbols-outlined text-accent-purple">psychology</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-white mb-1">Círculos Mastermind</h4>
+                            <p class="text-xs text-slate-400 leading-relaxed">Acceso exclusivo a grupos de alta
+                                dirección para resolver desafíos complejos.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-lg bg-accent-purple/10 flex items-center justify-center shrink-0">
+                            <span class="material-symbols-outlined text-accent-purple">rocket_launch</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-white mb-1">Liderazgo de Proyectos</h4>
+                            <p class="text-xs text-slate-400 leading-relaxed">Facultad para proponer y liderar
+                                iniciativas estratégicas regionales con apoyo de la red.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-lg bg-accent-purple/10 flex items-center justify-center shrink-0">
+                            <span class="material-symbols-outlined text-accent-purple">visibility</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-white mb-1">Alta Visibilidad</h4>
+                            <p class="text-xs text-slate-400 leading-relaxed">Mención destacada como Partner en canales
+                                oficiales y eventos presenciales.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-16 pt-8 border-t border-white/5">
+                    <div class="text-slate-400 text-xs uppercase tracking-widest mb-2">Total Anual</div>
+                    <div class="flex items-baseline gap-2">
+                        <span class="text-5xl font-bold purple-gradient-text">$5,000</span>
+                        <span class="text-slate-500 font-medium text-sm italic">MXN</span>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full md:w-7/12 p-8 md:p-12 bg-black/20">
+                <h3 class="text-xl font-bold mb-8 flex items-center gap-3">
+                    <span class="material-symbols-outlined text-accent-purple">payments</span>
+                    Finalizar Suscripción
+                </h3>
+                <div class="grid grid-cols-3 gap-3 mb-10">
+                    <button
+                        class="flex flex-col items-center gap-2 p-4 rounded-xl border border-accent-purple bg-accent-purple/5 transition-all">
+                        <span class="material-symbols-outlined">credit_card</span>
+                        <span class="text-[10px] font-bold uppercase tracking-tight">Tarjeta</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center gap-2 p-4 rounded-xl border border-white/10 hover:border-white/20 transition-all text-slate-500 hover:text-white">
+                        <span class="material-symbols-outlined">account_balance</span>
+                        <span class="text-[10px] font-bold uppercase tracking-tight">Transferencia</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center gap-2 p-4 rounded-xl border border-white/10 hover:border-white/20 transition-all text-slate-500 hover:text-white">
+                        <span class="material-symbols-outlined">account_balance_wallet</span>
+                        <span class="text-[10px] font-bold uppercase tracking-tight">PayPal</span>
+                    </button>
+                </div>
+                <form action="#" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label class="text-[10px] uppercase tracking-widest text-slate-500 font-bold ml-1">Nombre
+                                Completo</label>
+                            <input
+                                class="w-full bg-white/5 border-white/10 rounded-xl px-4 py-3 text-sm focus:border-accent-purple focus:ring-0 placeholder:text-slate-600 transition-all"
+                                placeholder="Como aparece en la tarjeta" type="text" />
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-[10px] uppercase tracking-widest text-slate-500 font-bold ml-1">Número de
+                                Tarjeta</label>
+                            <input
+                                class="w-full bg-white/5 border-white/10 rounded-xl px-4 py-3 text-sm focus:border-accent-purple focus:ring-0 placeholder:text-slate-600 transition-all"
+                                placeholder="0000 0000 0000 0000" type="text" />
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-3 gap-6">
+                        <div class="col-span-2 space-y-2">
+                            <label
+                                class="text-[10px] uppercase tracking-widest text-slate-500 font-bold ml-1">Expiración
+                                (MM/AA)</label>
+                            <input
+                                class="w-full bg-white/5 border-white/10 rounded-xl px-4 py-3 text-sm focus:border-accent-purple focus:ring-0 placeholder:text-slate-600 transition-all"
+                                placeholder="MM / AA" type="text" />
+                        </div>
+                        <div class="space-y-2">
+                            <label
+                                class="text-[10px] uppercase tracking-widest text-slate-500 font-bold ml-1">CVC</label>
+                            <input
+                                class="w-full bg-white/5 border-white/10 rounded-xl px-4 py-3 text-sm focus:border-accent-purple focus:ring-0 placeholder:text-slate-600 transition-all"
+                                placeholder="123" type="text" />
+                        </div>
+                    </div>
+                    <div class="pt-6 border-t border-white/5">
+                        <div class="flex items-center gap-2 mb-4">
+                            <input
+                                class="rounded bg-white/5 border-white/10 text-accent-purple focus:ring-0 cursor-pointer"
+                                id="billing" type="checkbox" />
+                            <label class="text-xs text-slate-400 cursor-pointer" for="billing">Requiere factura (Datos
+                                Fiscales)</label>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-[10px] uppercase tracking-widest text-slate-500 font-bold ml-1">RFC /
+                                Razón Social</label>
+                            <input
+                                class="w-full bg-white/5 border-white/10 rounded-xl px-4 py-3 text-sm focus:border-accent-purple focus:ring-0 placeholder:text-slate-600 transition-all"
+                                placeholder="Opcional" type="text" />
+                        </div>
+                    </div>
+                    <button
+                        class="w-full py-5 bg-accent-purple hover:bg-royal-purple text-white font-bold rounded-2xl shadow-xl shadow-accent-purple/30 transition-all mt-8 flex items-center justify-center gap-3 group"
+                        type="submit">
+                        Activar Membresía Anual
+                        <span
+                            class="material-symbols-outlined text-xl group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </button>
+                    <p class="text-[10px] text-center text-slate-500 mt-4 px-8">
+                        Al activar tu membresía, aceptas nuestros <a class="underline hover:text-white"
+                            href="#">Términos de Servicio</a> y <a class="underline hover:text-white" href="#">Política
+                            de Privacidad</a>. Pago anual recurrente.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

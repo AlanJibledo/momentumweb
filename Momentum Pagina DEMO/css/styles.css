@@ -1,0 +1,152 @@
+/* From Benefits Section */
+.gradient-border {
+    position: relative;
+    border: 1px solid transparent;
+    background-clip: padding-box;
+}
+
+.momentum-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.momentum-card:hover {
+    transform: translateY(-5px);
+}
+
+/* From Introduction Section */
+.newtons-cradle {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    height: 240px;
+    gap: 1.5rem;
+}
+
+.pendulum {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.string {
+    width: 2px;
+    height: 120px;
+    background-color: white;
+}
+
+.ball {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    margin-top: -2px;
+}
+
+.label-v {
+    writing-mode: vertical-rl;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.75rem;
+    margin-top: 1rem;
+    color: #a1a1aa;
+}
+
+.swing-left {
+    animation: swing-left 1.2s ease-in-out infinite alternate;
+    transform-origin: top;
+}
+
+@keyframes swing-left {
+    0% {
+        transform: rotate(25deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.divider-line {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #ffffff, transparent);
+    opacity: 0.3;
+}
+
+/* Modal Utilities */
+.modal-overlay {
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+}
+
+/* Glass Effect for Leader Modal */
+.glass-effect {
+    background: rgba(15, 15, 15, 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.purple-gradient-text {
+    background: linear-gradient(135deg, #C4B5FD 0%, #8B5CF6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Loading Screen Animations */
+@keyframes swing-left-loader {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(25deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes swing-right-loader {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    75% {
+        transform: rotate(-25deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.animate-swing-left-loader {
+    transform-origin: top center;
+    animation: swing-left-loader 2s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+.animate-swing-right-loader {
+    transform-origin: top center;
+    animation: swing-right-loader 2s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+.glow-effect {
+    filter: drop-shadow(0 0 8px rgba(18, 125, 161, 0.6));
+}
+
+.tracking-widest-extra {
+    letter-spacing: 0.4em;
+}
